@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Record</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="header">Full Stack Student Records</h1>
+        <form action="">
+            <span>
+                <label for="month">Month</label>
+                <select name="month" id="month"> <option>Months</option></select>
+            </span>
+            <span>
+                <label for="week">Week</label>
+                <select name="week" id="week"> <option>Weeks</option></select>
+            </span>
+        </form>
+                <table class="styled-table">
+                    <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Project</th>
+                        <th>Topic 1</th>
+                        <th>Topic 2</th>
+                        <th>Topic 3</th>
+                        <th>Topic 4</th>
+                        <th>Topic 5</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.  Elo</td>
+                        <td><input type="checkbox" name="project" id="project"></td>
+                        <td><input type="checkbox" name="topic1" id="topic1"></td>
+                        <td><input type="checkbox" name="topic2" id="topic2"></td>
+                        <td><input type="checkbox" name="topic3" id="topic3"></td>
+                        <td><input type="checkbox" name="topic4" id="topic4"></td>
+                        <td><input type="checkbox" name="topic5" id="topic5"></td>
+                        <td id="score">Score</td>
+                    </tr>
+                    <tr>
+                        <td>2. Joshua</td>
+                        <td><input type="checkbox" name="project" id="project"></td>
+                        <td><input type="checkbox" name="topic1" id="topic1"></td>
+                        <td><input type="checkbox" name="topic2" id="topic2"></td>
+                        <td><input type="checkbox" name="topic3" id="topic3"></td>
+                        <td><input type="checkbox" name="topic4" id="topic4"></td>
+                        <td><input type="checkbox" name="topic5" id="topic5"></td>
+                        <td id="score">Score</td>
+                    </tr>
+                </tbody>
+                </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
