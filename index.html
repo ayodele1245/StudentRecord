@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,56 +8,94 @@
     <title>Students Record</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
         <h1 id="header">Full Stack Student Records</h1>
-        <form action="">
-            <span>
-                <label for="month">Month</label>
-                <select name="month" id="month"> <option>Months</option></select>
-            </span>
-            <span>
-                <label for="week">Week</label>
-                <select name="week" id="week"> <option>Weeks</option></select>
-            </span>
+
+    <!-- Button to open the modal -->
+    <button onclick="document.getElementById('modal').style.display='block'" class="openbtn">Click to Open Form</button>
+    <!-- The Modal (contains the Create/Edit table form) -->
+    <div id="modal" class="modal">
+        <span onclick="document.getElementById('modal').style.display='none'" class="close"
+            title="Close Modal">times;</span>
+        <form class="modal-content" action="">
+            <div class="container">
+                <h1>Add your details to table</h1>
+                <p>Select approriate month and weeks fill in this form to add your information into table below.</p>
+                <hr>
+                <span>
+                    <label for="month">Month</label>
+                    <select name="month" id="month">
+                        <option>Months</option>
+                    </select>
+                </span>
+                <span>
+                    <label for="week">Week</label>
+                    <select name="week" id="week">
+                        <option>Weeks</option>
+                    </select>
+                </span>
+               <!-- <label for="name"><b>Full Name</b></label> -->
+                <input type="text" placeholder="Enter Your Full Name" name="name" required>
+
+                <!--<label for="email"><b>Email</b></label>-->
+                <input type="email" placeholder="Enter Email" name="email" required>
+
+                <!--<label for="project"><b>Project Title</b></label>-->
+                <input type="text" placeholder="Enter Project Title" name="title" required>
+
+                <p>By clicking create table, it means you agree that all information you have given are correct.
+                    You can edit in case you made mistake</p>
+
+                <div class="actionbtn">
+                    <button type="button" class="createtablebtn">Create Table</button>
+                    <button type="submit" class="edittablebtn">Edit</button>
+                    <button type="button" onclick="document.getElementById('modal').style.display='none'" class="close">Cancel</button>
+                </div>
+            </div>
         </form>
-                <table class="styled-table">
-                    <thead>
-                    <tr>
-                        <th>Student Name</th>
-                        <th>Project</th>
-                        <th>Topic 1</th>
-                        <th>Topic 2</th>
-                        <th>Topic 3</th>
-                        <th>Topic 4</th>
-                        <th>Topic 5</th>
-                        <th>Score</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1.  Elo</td>
-                        <td><input type="checkbox" name="project" id="project"></td>
-                        <td><input type="checkbox" name="topic1" id="topic1"></td>
-                        <td><input type="checkbox" name="topic2" id="topic2"></td>
-                        <td><input type="checkbox" name="topic3" id="topic3"></td>
-                        <td><input type="checkbox" name="topic4" id="topic4"></td>
-                        <td><input type="checkbox" name="topic5" id="topic5"></td>
-                        <td id="score">Score</td>
-                    </tr>
-                    <tr>
-                        <td>2. Joshua</td>
-                        <td><input type="checkbox" name="project" id="project"></td>
-                        <td><input type="checkbox" name="topic1" id="topic1"></td>
-                        <td><input type="checkbox" name="topic2" id="topic2"></td>
-                        <td><input type="checkbox" name="topic3" id="topic3"></td>
-                        <td><input type="checkbox" name="topic4" id="topic4"></td>
-                        <td><input type="checkbox" name="topic5" id="topic5"></td>
-                        <td id="score">Score</td>
-                    </tr>
-                </tbody>
-                </table>
+    </div>
+
+
+
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Project</th>
+                <th>Topic 1</th>
+                <th>Topic 2</th>
+                <th>Topic 3</th>
+                <th>Topic 4</th>
+                <th>Topic 5</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1. Elo</td>
+                <td><input type="checkbox" name="project" id="project"></td>
+                <td><input type="checkbox" name="topic1" id="topic1"></td>
+                <td><input type="checkbox" name="topic2" id="topic2"></td>
+                <td><input type="checkbox" name="topic3" id="topic3"></td>
+                <td><input type="checkbox" name="topic4" id="topic4"></td>
+                <td><input type="checkbox" name="topic5" id="topic5"></td>
+                <td id="score">Score</td>
+            </tr>
+            <tr>
+                <td>2. Joshua</td>
+                <td><input type="checkbox" name="project" id="project"></td>
+                <td><input type="checkbox" name="topic1" id="topic1"></td>
+                <td><input type="checkbox" name="topic2" id="topic2"></td>
+                <td><input type="checkbox" name="topic3" id="topic3"></td>
+                <td><input type="checkbox" name="topic4" id="topic4"></td>
+                <td><input type="checkbox" name="topic5" id="topic5"></td>
+                <td id="score">Score</td>
+            </tr>
+        </tbody>
+    </table>
     </div>
     <script src="index.js"></script>
 </body>
+
 </html>
